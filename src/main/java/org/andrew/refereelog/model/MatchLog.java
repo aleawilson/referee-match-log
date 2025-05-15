@@ -1,6 +1,17 @@
 package org.andrew.refereelog.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class MatchLog {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String referee;
     private String assistantReferee1;
     private String assistantReferee2;

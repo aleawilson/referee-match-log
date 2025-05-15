@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Match Report</h1>
-<form id="match-form" aria-label="Match Report Form">
+<form id="match-form" action="/submit" method="post" aria-label="Match Report Form">
     <fieldset>
         <legend>Officials</legend>
         <div>
@@ -17,12 +17,12 @@
         </div>
 
         <div>
-            <label for="ar1">Assistant Referee 1:</label>
+            <label for="assistantReferee1">Assistant Referee 1:</label>
             <input type="text" name="assistantReferee1" id="assistantReferee1" placeholder="John Doe" required>
         </div>
 
         <div>
-            <label for="ar2">Assistant Referee 2:</label>
+            <label for="assistantReferee2">Assistant Referee 2:</label>
             <input type="text" name="assistantReferee2" id="assistantReferee2" placeholder="John Doe" required>
         </div>
     </fieldset>
