@@ -1,4 +1,4 @@
-package org.andrew.refereelog.refereelog;
+package org.andrew.refereelog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

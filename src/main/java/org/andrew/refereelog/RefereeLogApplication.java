@@ -1,4 +1,4 @@
-package org.andrew.refereelog.refereelog;
+package org.andrew.refereelog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

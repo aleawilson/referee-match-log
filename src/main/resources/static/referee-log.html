@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soccer Match Log</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<h1>Match Report</h1>
+<form id="match-form" aria-label="Match Report Form">
+    <fieldset>
+        <legend>Officials</legend>
+        <div>
+            <label for="referee">Referee:</label>
+            <input type="text" name="referee" id="referee" placeholder="John Doe" required>
+        </div>
+
+        <div>
+            <label for="ar1">Assistant Referee 1:</label>
+            <input type="text" name="assistantReferee1" id="assistantReferee1" placeholder="John Doe" required>
+        </div>
+
+        <div>
+            <label for="ar2">Assistant Referee 2:</label>
+            <input type="text" name="assistantReferee2" id="assistantReferee2" placeholder="John Doe" required>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Teams & Scores</legend>
+        <div>
+            <label for="homeTeamName">Home Team Name:</label>
+            <input type="text" name="homeTeamName" id="homeTeamName" required>
+        </div>
+
+        <div>
+            <label for="awayTeamName">Away Team Name:</label>
+            <input type="text" name="awayTeamName" id="awayTeamName" required>
+        </div>
+
+        <div>
+            <label for="homeTeamScore">Home Team Score:</label>
+            <input type="number" name="homeTeamScore" id="homeTeamScore" min="0" required>
+        </div>
+
+        <div>
+            <label for="awayTeamScore">Away Team Score:</label>
+            <input type="number" name="awayTeamScore" id="awayTeamScore" min="0" required>
+        </div>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Link to your JavaScript file -->
+<script src=""></script>
+</body>
+</html>
