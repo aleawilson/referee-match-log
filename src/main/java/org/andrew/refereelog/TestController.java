@@ -20,7 +20,6 @@ public class TestController {
 
     @PostMapping("/submit")
     public String submitForm(@ModelAttribute MatchLog matchLog) {
-        System.out.println("Saving match for: " + matchLog.getReferee());
         matchLogRepository.save(matchLog);
         return "Match saved for Referee: " + matchLog.getReferee();
     }
