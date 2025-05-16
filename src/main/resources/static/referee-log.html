@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Soccer Match Log</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 <h1>Match Report</h1>
-<form id="match-form" action="/submit" method="post" aria-label="Match Report Form">
+<form id="match-form" method="post" aria-label="Match Report Form">
     <fieldset>
         <legend>Officials</legend>
         <div>
@@ -52,8 +52,8 @@
 
     <button type="submit">Submit</button>
 </form>
+<div id="confirmationMessage" style="display:none;"></div>
 
-<!-- Link to your JavaScript file -->
-<script src=""></script>
+<script src="/js/matchlog.js" defer></script>
 </body>
 </html>
