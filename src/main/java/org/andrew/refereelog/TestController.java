@@ -10,11 +10,6 @@ import org.andrew.refereelog.repository.MatchLogRepository;
 
 @RestController
 public class TestController {
-    //@GetMapping("/")
-    //public String showForm() {
-    //    return "index";
-   // }
-
     @Autowired
     private MatchLogRepository matchLogRepository;
 
