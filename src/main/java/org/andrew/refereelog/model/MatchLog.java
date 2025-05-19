@@ -1,9 +1,7 @@
 package org.andrew.refereelog.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 @Entity
 public class MatchLog {
@@ -12,14 +10,30 @@ public class MatchLog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Name is required")
+    @Pattern(regexp = "^\\D*$", message = "Must not contain numbers")
     private String referee;
+
+    @NotBlank(message = "Name is required")
+    @Pattern(regexp = "^\\D*$", message = "Must not contain numbers")
     private String assistantReferee1;
+
+    @NotBlank(message = "Name is required")
+    @Pattern(regexp = "^\\D*$", message = "Must not contain numbers")
     private String assistantReferee2;
 
+    @NotBlank(message = "Team name is required")
     private String homeTeamName;
+
+    @NotBlank(message = "Team name is required")
     private String awayTeamName;
 
+    @NotBlank(message = "Score is required")
+    @Min(value = 0, message = "Must be zero or a positive number")
     private int homeTeamScore;
+
+    @NotBlank(message = "Score is required")
+    @Min(value = 0, message = "Must be zero or a positive number")
     private int awayTeamScore;
 
     public String getReferee() {
