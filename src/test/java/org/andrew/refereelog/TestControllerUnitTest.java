@@ -6,30 +6,22 @@ import org.andrew.refereelog.repository.MatchLogRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.Mockito.verify;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@ExtendWith(MockitoExtension.class)
 class TestControllerUnitTest {
     @Mock
     private MatchLogRepository repository;
 
     @InjectMocks
     private TestController controller;
-
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
-
-    @AfterEach
-    void tearDown() throws Exception {
-        // clean up the mocks after each test
-        mocks.close();
-    }
 
     @Test
     void submitForm_savesMatchLog_andReturnsMessage() {
