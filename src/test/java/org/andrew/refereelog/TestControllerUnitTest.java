@@ -1,9 +1,9 @@
 // 1. Pure unit test for TestController using JUnit 5 and Mockito
 package org.andrew.refereelog;
 
-import org.andrew.refereelog.controller.TestController;
 import org.andrew.refereelog.model.MatchLog;
 import org.andrew.refereelog.repository.MatchLogRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -23,6 +23,12 @@ class TestControllerUnitTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
+    }
+
+    @AfterEach
+    void tearDown() throws Exception {
+        // clean up the mocks after each test
+        mocks.close();
     }
 
     @Test
